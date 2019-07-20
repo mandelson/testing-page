@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+
+
+    <style>
+        .icons img {
+            margin: 10px 15px 10px 15px;
+            width: auto;
+        }
+    
+        .nav-items div {
+            border-left: #363636 solid 1px;
+            height: auto;
+        }
+    
+        body {
+            margin: 0px;
+            background-color: #F7F7F7;
+            width: 100vw;
+        }
+    
+        div {
+            display: block;
+    
+        }
+    
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            color: #494949;
+            font-size: 30px;
+    
+        }
+    
+        h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+            color: #949494;
+            font-size: 14px;
+            line-height: 12px;
+    
+        }
+    
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            color: #494949;
+            font-size: 16px;
+            line-height: 12px;
+            margin-left: 1em;
+    
+        }
+    
+        h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            color: #494949;
+            font-size: 20px;
+            line-height: 12px;
+            margin-left: 1em;
+    
+        }
+    
+        h5 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            color: #494949;
+            font-size: 16px;
+            line-height: 12px;
+            /* margin-left: 1em; */
+    
+        }
+    
+        p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+            color: #949494;
+    
+        }
+    
+        ul li {
+            list-style: none;
+            font-family: 'Open Sans', sans-serif;
+            padding: 0px;
+            line-height: 35px;
+            font-weight: 200;
+            font-size: 16px;
+            color: #494949;
+    
+        }
+    
+        .big-number {
+            font-size: 1.5em;
+            color: #363636;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 500;
+    
+        }
+    
+        .number-label {
+            font-size: 15px;
+            color: #949494;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 200;
+    
+        }
+    
+        .logo {
+            display: flex;
+            background-color: white;
+            filter: drop-shadow(3px 2px 4px #00000075);
+            height: 45px;
+            padding: 10px 15px;
+            overflow: visible;
+            margin-left: 4em;
+    
+    
+    
+        }
+    
+        .intro .intro-text {
+            margin-left: 20px;
+            margin-right: 20px;
+    
+        }
+    
+        .intro .intro-text p {
+            align-items: flex-end;
+    
+        }
+    
+        #navi {
+            background-color: #494949;
+            width: 100vw;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            justify-content: flex-start;
+            margin-left: auto;
+            margin-right: auto;
+    
+        }
+    
+        .container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 10px;
+            background-color: #F7F7F7;
+            width: 100vw;
+            margin: 0;
+        }
+    
+        .container .navi {
+            display: block;
+            color: navy;
+            //**border: 1px solid;**//
+            padding: 20px;
+            background-color: linen;
+        }
+    
+        .container .dropdown {
+    
+            overflow: hidden;
+            color: navy;
+            //**border: 1px solid;**//
+            padding: 20px;
+        }
+    
+        .btn {
+            display: flex;
+            background-color: #F38466;
+            border-radius: 2px;
+            border: none;
+            padding: 5px 15px;
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            margin-right: 20px;
+    
+    
+        }
+    
+        .button-ghost {
+            border: #F38466 solid 2px;
+            color: #F38466;
+            background-color: #ffffff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 3px;
+            margin: 0.5em;
+            font-family: 'Open Sans', sans-serif;
+      
+            
+    
+        }
+    
+        .button-ghost:hover {
+            border: #F38466 solid 2px;
+            color: #ffffff;
+            background-color: #F38466;
+    
+    
+    
+        }
+    
+        .nav-items {
+            align-items: center;
+            display: flex;
+            justify-items: flex-end;
+    
+        }
+    
+        .arrow {
+            display: -webkit-inline-box;
+            transform: rotate(-45deg);
+            font-size: xx-small;
+            vertical-align: top;
+            margin-left: 15px;
+    
+        }
+    
+        .dropbtn {
+            background-color: #494949;
+            color: #949494;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            padding-left: 1.5em;
+        }
+    
+        .dropdown {
+            display: flex;
+            justify-items: flex-start;
+            overflow: hidden;
+            flex-grow: 1;
+            background-color: #494949;
+    
+        }
+    
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+    
+        .dropdown-content a {
+            color: black;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            background-color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+    
+        }
+    
+    
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+    
+        .dropdown:hover .dropdown-content {
+            display: block;
+            margin-top: 50px;
+    
+        }
+    
+    
+        .dropdown:hover .dropbtn {
+            background-color: #363636;
+        }
+    
+    
+    
+        .nav {
+            grid-area: 1 / 1 / 1 / 13;
+    
+        }
+    
+        .intro {
+            grid-area: 2 / 3 / 2 / 11;
+            background-color: #ffffff;
+            display: flex;
+            margin-top: 30px;
+    
+    
+        }
+    
+        .intro img {
+            width: 100%;
+    
+    
+        }
+    
+    
+        .stats {
+            grid-area: 3 / 3 / 3 / 11;
+            background-color: #ffffff;
+            padding: 5px;
+            margin-top: 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+    
+    
+        }
+    
+        .stats div {
+            margin: 2.1em;
+            /* border-left: green solid 1px; */
+            padding-left: 2em;
+            width: 10em;
+    
+        }
+    
+        .stats div:not(:first-child) {
+    
+            border-left: green solid 1px;
+            padding-left: 4.5em;
+    
+        }
+    
+        .divider {
+            grid-area: 5 / 3 / 5 / 11;
+            border-top: #e8e8e8 solid 2px;
+            margin: 20px;
+    
+        }
+    
+        .recents {
+            grid-area: 4 / 3 / 4 / 11;
+            display: flex;
+            flex-direction: row;
+    
+    
+    
+        }
+    
+        .recents ul li {
+            padding: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            list-style-image: url('https://github.com/mandelson/gif_looper/blob/master/frog-icon.png?raw=true');
+    
+        }
+    
+        .recents ul {
+            padding: 15px;
+            margin-top: 40px;
+            margin-left: 2.5em;
+    
+        }
+    
+        .recents img {
+            width: 100%;
+    
+        }
+    
+        .participation {
+            grid-area: 5 / 3 / 5 / 7;
+            background-color: #ffffff;
+            padding: 10px;
+            margin-top: 35px;
+    
+    
+        }
+    
+        .text-box p {
+            margin: 1em;
+    
+    
+    
+        }
+    
+        .protocols {
+            grid-area: 5 / 7 / 5 / 11;
+            background-color: #ffffff;
+            padding: 10px;
+            margin-top: 35px;
+    
+    
+        }
+    
+        .featured {
+            grid-area: 6 / 4 / 6 / 10;
+    
+    
+        }
+    
+        .updates {
+            grid-area: 7 / 4 / 7 / 10;
+    
+    
+        }
+    
+        .updates {
+            grid-area: 7 / 4 / 7 / 10;
+    
+    
+        }
+    
+        .updates {
+            grid-area: 7 / 4 / 7 / 10;
+    
+    
+        }
+    
+        .gallery {
+            grid-area: 8 / 4 / 8 / 10;
+    
+    
+        }
+    
+        .join {
+            grid-area: 8 / 4 / 8 / 10;
+    
+    
+        }
+    </style>
+
+</head>
+
+<body class="container">
+    <div class="nav">
+        <div id="navi">
+            <div>
+                <img class="logo" src="https://potterparkzoo.org/wp-content/uploads/2018/02/AZA-FrogWatch-USA-Logo.png">
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Projects<span class="arrow">&#9699;</span></button>
+                <div class="dropdown-content">
+                    <a href="#">BudBurst</a>
+                    <a href="#">SharkWatch</a>
+                    <a href="#">Chesapeake Bay Watershed</a>
+                </div>
+            </div>
+            <div class="nav-items">
+                <div>
+                    <button class="btn">Create New</button>
+                </div>
+                <div>
+                    <a class="icons" href="#"><img style="align: right; " src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMThweCIg%0D%0AaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMTggMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0%0D%0AdHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcv%0D%0AMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0%0D%0AdHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5CYXItZ3Jh%0D%0AcGg8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBp%0D%0AZD0iSG9tZXBhZ2UiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBm%0D%0AaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwYXRoIGQ9Ik0xNi42ODgxMjc2LDAgTDE0LjI0%0D%0AMDUzNTYsMCBDMTMuNjI1OTY3NSwwIDEzLjM1MDUwMjEsMC40OTczMzMzMzMgMTMuMzUwNTAyMSwx%0D%0ALjExMTExMTExIEwxMy4zNTA1MDIxLDIwIEwxNy44MDA2Njk1LDIwIEwxNy44MDA2Njk1LDEuMTEx%0D%0AMTExMTEgQzE3LjgwMDY2OTUsMC40OTczMzMzMzMgMTcuMzAyNjk1NywwIDE2LjY4ODEyNzYsMCBM%0D%0AMTYuNjg4MTI3NiwwIFogTTEwLjAxMjg3NjYsNi42NjY2NjY2NyBMNy41NjUyODQ1Miw2LjY2NjY2%0D%0ANjY3IEM2Ljk1MDcxNjQxLDYuNjY2NjY2NjcgNi42NzUyNTEwNSw3LjE2NCA2LjY3NTI1MTA1LDcu%0D%0ANzc3Nzc3NzggTDYuNjc1MjUxMDUsMjAgTDExLjEyNTQxODQsMjAgTDExLjEyNTQxODQsNy43Nzc3%0D%0ANzc3OCBDMTEuMTI1NDE4NCw3LjE2NCAxMC42Mjc0NDQ3LDYuNjY2NjY2NjcgMTAuMDEyODc2Niw2%0D%0ALjY2NjY2NjY3IEwxMC4wMTI4NzY2LDYuNjY2NjY2NjcgWiBNMy4zMzc2MjU1MiwxMy4zMzMzMzMz%0D%0AIEwwLjg5MDAzMzQ3MywxMy4zMzMzMzMzIEMwLjI3NTQ2NTM2LDEzLjMzMzMzMzMgMCwxMy44MzA2%0D%0ANjY3IDAsMTQuNDQ0NDQ0NCBMMCwyMCBMNC40NTAxNjczNywyMCBMNC40NTAxNjczNywxNC40NDQ0%0D%0ANDQ0IEM0LjQ1MDE2NzM3LDEzLjgzMDY2NjcgMy45NTIxOTM2NCwxMy4zMzMzMzMzIDMuMzM3NjI1%0D%0ANTIsMTMuMzMzMzMzMyBMMy4zMzc2MjU1MiwxMy4zMzMzMzMzIFoiIGlkPSJCYXItZ3JhcGgiIGZp%0D%0AbGw9IiNFQUVBRUEiPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+" /></a></div>
+                <div><a class="icons" href="#"><img style="align: right; " src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTdweCIg%0D%0AaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMTcgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0%0D%0AdHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcv%0D%0AMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0%0D%0AdHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5ub3RpZmlj%0D%0AYXRpb25zPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAg%0D%0APGcgaWQ9IkhvbWVwYWdlIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9u%0D%0AZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0ibm90aWZpY2F0aW9ucyI+CiAg%0D%0AICAgICAgICAgIDxnIGlkPSJHcm91cC0zIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04LjUs%0D%0AMjAgQzkuNiwyMCAxMC41LDE5LjEgMTAuNSwxOCBMNi41LDE4IEM2LjUsMTkuMSA3LjQsMjAgOC41%0D%0ALDIwIEw4LjUsMjAgWiBNMTUsMTQgTDE1LDguNSBDMTUsNS40IDEyLjksMi45IDEwLDIuMiBMMTAs%0D%0AMS41IEMxMCwwLjcgOS4zLDAgOC41LDAgQzcuNywwIDcsMC43IDcsMS41IEw3LDIuMiBDNC4xLDIu%0D%0AOSAyLDUuNCAyLDguNSBMMiwxNCBMMCwxNiBMMCwxNyBMMTcsMTcgTDE3LDE2IEwxNSwxNCBMMTUs%0D%0AMTQgWiIgaWQ9IlNoYXBlIiBmaWxsPSIjRUFFQUVBIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8%0D%0AY2lyY2xlIGlkPSJPdmFsIiBmaWxsPSIjREExMzEzIiBmaWxsLXJ1bGU9Im5vbnplcm8iIGN4PSIx%0D%0ANCIgY3k9IjMiIHI9IjMiPjwvY2lyY2xlPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgog%0D%0AICAgPC9nPgo8L3N2Zz4=" /></a></div>
+                <div><a class="icons" href="#"><img style="align: right; " src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIg%0D%0AaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0%0D%0AdHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcv%0D%0AMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0%0D%0AdHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5hY2NvdW50%0D%0ALWNpcmNsZTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAg%0D%0AIDxnIGlkPSJIb21lcGFnZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5v%0D%0AbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9ImFjY291bnQtY2lyY2xlIiBm%0D%0AaWxsPSIjRUFFQUVBIj4KICAgICAgICAgICAgPHBhdGggZD0iTTEwLDAgQzQuNSwwIDAsNC41IDAs%0D%0AMTAgQzAsMTUuNSA0LjUsMjAgMTAsMjAgQzE1LjUsMjAgMjAsMTUuNSAyMCwxMCBDMjAsNC41IDE1%0D%0ALjUsMCAxMCwwIEwxMCwwIFogTTEwLDMgQzExLjcsMyAxMyw0LjMgMTMsNiBDMTMsNy43IDExLjcs%0D%0AOSAxMCw5IEM4LjMsOSA3LDcuNyA3LDYgQzcsNC4zIDguMywzIDEwLDMgTDEwLDMgWiBNMTAsMTcu%0D%0AMiBDNy41LDE3LjIgNS4zLDE1LjkgNCwxNCBDNCwxMiA4LDEwLjkgMTAsMTAuOSBDMTIsMTAuOSAx%0D%0ANiwxMiAxNiwxNCBDMTQuNywxNS45IDEyLjUsMTcuMiAxMCwxNy4yIEwxMCwxNy4yIFoiIGlkPSJT%0D%0AaGFwZSI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" /></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="Intro">
+        <div class="intro-text">
+            <h1>Frogwatch USA</h1>
+            <h5>Photos Required</h5>
+            <h5>Prerequisites</h5>
+            <p>Nam vehicula facilisis ante, quis accumsan massa dignissim sed. Cras euismod in diam non iaculis. Fusce
+                scelerisque bibendum lacus. Suspendisse feugiat diam eget tristique ullamcorper.</p>
+        </div>
+        <img src="https://github.com/mandelson/gif_looper/blob/master/Website_Frog-min.png?raw=true">
+    </div>
+    <div class="Stats">
+
+        <div><span class="big-number">34,215</span><br>
+            <span class="number-label">TOTAL OBSERVATIONS</span>
+        </div>
+        <div><span class="big-number">315</span><br>
+            <span class="number-label">IDENTIFIED SPECIES</span>
+        </div>
+        <div><span class="big-number">1,380</span><br>
+            <span class="number-label">STATIONS</span>
+        </div>
+        <div><span class="big-number">276</span><br>
+            <span class="number-label">CONTRIBUTIONS</span>
+        </div>
+
+    </div>
+
+
+    <div class="Recents">
+
+        <div>
+            <h3>Recents</h3><img src="https://github.com/mandelson/gif_looper/blob/master/recents_map2.png?raw=true">
+        </div>
+        <ul>
+            <li>Swamp Frog</li>
+            <li>Poison Dart Frog</li>
+            <li>Green Frog</li>
+            <li>Leafy Frog</li>
+            <li>Toad Frog</li>
+            <li>Toadette</li>
+        </ul>
+
+    </div>
+    <div class="divider"></div>
+    <div class="Participation text-box">
+        <h4>How to Participate</h4>
+        <p>Use this section to describe in detail any required qualificatons users might need to participate in the
+            project, such as a scuba diving license. Read more</p>
+        <div class="button-ghost">Download List</div>
+    </div>
+    <div class="Protocols text-box">
+        <h4>Observation Protocol</h4>
+        <p>Use this section to share anything an observer needs to know prior to observing.</p>
+
+            <ul>
+                <li>✔ Observe 30 minutes after dark</li>
+                <li>✔ Bring a sheet of paper to mark down calls</li>
+                <li>✔ Download Survey123 to enter data</li>
+                <li>✔ Observe swithin 20 feet of a pond or swamp</li>
+                <li>✔ Observe swithin 20 feet of a pond or swamp</li>
+                <li>✔ Observe swithin 20 feet of a pond or swamp</li>
+                <li>✔ Observe swithin 20 feet of a pond or swamp</li>
+
+            </ul>
+            
+        <div class="button-ghost">Download List</div>
+    </div>
+    <div class="Featured">Maps & Graphs</div>
+    <div class="Updates">See All</div>
+    <div class="Gallery">Photos</div>
+    <div class="Join">Enter Email</div>
+</body>
+
+
+</html>
