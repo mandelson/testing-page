@@ -54,6 +54,10 @@
 
     anim = lottie.loadAnimation(params);
 
+    let animationView = LOTAnimationView(contentsOf: WebURL)
+self.view.addSubview(animationView)
+animationView.play()
+
 function like() {
 anim.playSegments([[0, 100]], true)
 }
